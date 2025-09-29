@@ -1,0 +1,150 @@
+#include "timer0.h"
+#include "std_types.h"
+#include "lcd.h"
+#include "uart.h"
+#include "gpio.h"
+#include <avr/delay.h>
+uint8 Str1[5] , Str2[5],Str3[5] ;
+int n , action  ;
+void Step1_Change_Pass_Send(void);
+void Home(void);
+void Open_Door(void);
+void Change_Password(void);
+void Timer0_Delay(void);
+int main (void){
+	uint8 Char ;
+	LCD_init();
+	Timer0_config config = {CLOCK_1024,CTC,0,250};
+	Uart_config uart_config = {8,1};
+	UART_init(9600, &uart_config);
+	Step1_Change_Pass_Send();
+	Home();
+	while (1)
+	{
+		Char = KEYPAD_getPressedKey();
+		switch (Char) {
+		case '+' :
+			Open_Door();
+			break ;
+		case '-' :
+			Change_Password();
+			break ;
+		default :
+			Home();
+			break ;
+		}
+		if (action){
+
+		}
+
+	}
+	return 0 ;
+}
+
+void Step1_Change_Pass_Send(void){
+	uint8 Str1[5] , Str2[5] ;
+	int i ,j ,z ;
+	LCD_clearScreen();
+	LCD_displayStringRowColumn(0,0,"Plz Enter Pass");
+	for (i=0 ; i<5 ; i++ ){
+		if (KEYPAD_getPressedKey() == 13){
+					break ;
+				}
+		Str1[i] = KEYPAD_getPressedKey();
+		_delay_ms(500);
+		LCD_displayStringRowColumn(1,i,"*");
+
+	}
+	_delay_ms(600);
+	LCD_clearScreen();
+	LCD_displayStringRowColumn(0,0,"Plz REEnter Pass");
+	for (j=0 ; j<5 ; j++ ){
+		if (KEYPAD_getPressedKey() == 13){
+			break ;
+		}
+		Str2[j] = KEYPAD_getPressedKey();
+		_delay_ms(500);
+		LCD_displayStringRowColumn(1,j,"*");
+
+	}
+	_delay_ms(500);
+	LCD_clearScreen();
+
+	for (i=0 ; i<5; i++){
+		if (Str1[i] != Str2[i] ){
+			n =1 ;
+			break ;
+		}else {
+			n =  0 ;
+		}
+	}
+	if (n==0){
+		UART_sendByte(100);
+		for(z=0 ; z<5 ; z++){
+			UART_sendByte(Str1[z]);
+			_delay_ms(10);
+		}
+	}else if (n ==1 ) {
+		Step1_Change_Pass_Send();
+	}
+n = 0 ;
+}
+void Home(void){
+	LCD_clearScreen();
+	LCD_displayStringRowColumn(0,0,"+ : Open Door");
+	LCD_displayStringRowColumn(1,0,"- : Change Pass");
+}
+void Open_Door(void){
+	int i ;
+	LCD_clearScreen();
+	LCD_displayStringRowColumn(0,0,"Please Enter Pass");
+	for (i =0 ; i<5 ; i++){
+		if (KEYPAD_getPressedKey() == 13){
+							break ;
+						}
+		Str3[i] = KEYPAD_getPressedKey();
+		_delay_ms(600);
+		LCD_displayStringRowColumn(1,i,"*");
+	}
+	UART_sendByte(111);
+		_delay_ms(10);
+	for(i = 0 ; i < 5 ; i ++){
+		UART_sendByte(Str3[i]);
+				_delay_ms(10);
+	}
+	_delay_ms(10);
+	action = UART_recieveByte();
+	if (action == DOOR_OPEN){
+		LCD_displayStringRowColumn(0,0,"Door Opening");
+
+	}
+}
+void Change_Password(void){
+	int i ;
+
+	LCD_clearScreen();
+	LCD_displayStringRowColumn(0,0,"Please Enter Pass");
+	for (i=0 ; i<5 ; i++){
+		Str3[i] = KEYPAD_getPressedKey();
+		_delay_ms(600);
+		LCD_displayStringRowColumn(1,i,"*");
+	}
+	UART_sendByte(222);
+	for (i = 0 ; i <5 ; i ++){
+		UART_sendByte(Str3[i]);
+		_delay_ms(10);
+	}
+}
+void Timer0_Delay(void){
+	 int tick = 0 ;
+	 if (tick == 469){
+		LCD_displayStringRowColumn(0, 0,"Door Opened");
+	 }else if (tick ==562){
+		 LCD_displayStringRowColumn(0, 0,"Door Closing");
+	 }else if (tick == 1031){
+		 Time0_deinit();
+		 Home();
+		 tick = 0 ;
+	 }
+	 tick ++ ;
+ }

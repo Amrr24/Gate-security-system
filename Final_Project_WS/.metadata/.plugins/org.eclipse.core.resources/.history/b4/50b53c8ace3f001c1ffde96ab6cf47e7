@@ -1,0 +1,56 @@
+#include "timer0.h"
+#include "std_types.h"
+#include <avr/io.h>
+#include <avr/interrupt.h>
+uint8 WGM  ;
+static volatile void (*g_callBackPtr)(void) = NULL_PTR;
+
+ISR(TIMER0_OVF_vect){
+	if(g_callBackPtr != NULL_PTR)
+		{
+			/* Call the Call Back function in the application after the edge is detected */
+			(*g_callBackPtr)(); /* another method to call the function using pointer to function g_callBackPtr(); */
+		}
+}
+ISR(TIMER0_COMP_vect){
+	if(g_callBackPtr != NULL_PTR)
+		{
+			/* Call the Call Back function in the application after the edge is detected */
+			(*g_callBackPtr)(); /* another method to call the function using pointer to function g_callBackPtr(); */
+		}
+}
+void Timer0_init(const Timer0_config *ptr){
+	TCNT0 = ptr->init_value ;
+	TCCR0 = ptr->clock ;
+	OCR0 = ptr->comp_value ;
+	switch (ptr->mode){
+	case 0 :
+		WGM = 0x00 ;
+		TIMSK = 1;
+		break ;
+	case 1 :
+		WGM = 0x40 ;
+
+		break ;
+	case 2 :
+		WGM = 0x08  ;
+		TIMSK = 2;
+
+		break ;
+	case 3 :
+		WGM = 0x48 ;
+		break ;
+	default :
+		break ;
+	}
+	TCCR0 |= WGM ;
+}
+void Timer0_SetcallBack(void(*a_ptr)(void)){
+	g_callBackPtr = a_ptr;
+}
+void Time0_deinit(void){
+TCCR0 = 0 ;
+TCNT0 = 0 ;
+TIMSK = 0 ;
+
+}

@@ -1,0 +1,2354 @@
+01:47:50 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Building file: ../Door_Security_System2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System2.d" -MT"Door_Security_System2.o" -c -o "Door_Security_System2.o" "../Door_Security_System2.c"
+In file included from ../Door_Security_System2.c:1:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Door_Security_System2.c: In function 'main':
+../Door_Security_System2.c:36: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+../Door_Security_System2.c:72: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+../Door_Security_System2.c: In function 'BUZZER_ON_MIN':
+../Door_Security_System2.c:108: warning: implicit declaration of function 'Home'
+Finished building: ../Door_Security_System2.c
+ 
+Building target: Control_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU.map -mmcu=atmega16 -o "Control_ECU.elf"  ./Door_Security_System2.o ./buzzer.o ./external_eeprom.o ./gpio.o ./motor.o ./pwm.o ./timer0.o ./twi.o ./uart.o   
+./Door_Security_System2.o: In function `main':
+../Door_Security_System2.c:18: undefined reference to `Home'
+make: *** [Control_ECU.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:47:58 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Building file: ../Door_Security_System2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System2.d" -MT"Door_Security_System2.o" -c -o "Door_Security_System2.o" "../Door_Security_System2.c"
+In file included from ../Door_Security_System2.c:1:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Door_Security_System2.c: In function 'main':
+../Door_Security_System2.c:36: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+../Door_Security_System2.c:72: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+../Door_Security_System2.c: In function 'BUZZER_ON_MIN':
+../Door_Security_System2.c:108: warning: implicit declaration of function 'Home'
+Finished building: ../Door_Security_System2.c
+ 
+Building target: Control_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU.map -mmcu=atmega16 -o "Control_ECU.elf"  ./Door_Security_System2.o ./buzzer.o ./external_eeprom.o ./gpio.o ./motor.o ./pwm.o ./timer0.o ./twi.o ./uart.o   
+./Door_Security_System2.o: In function `main':
+../Door_Security_System2.c:16: undefined reference to `Home'
+make: *** [Control_ECU.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:47:59 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13460 bytes (82.2% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+01:47:59 **** Incremental Build of configuration Debug for project dgdgdgd ****
+make all 
+Building target: dgdgdgd.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,dgdgdgd.map -mmcu=atmega16 -o "dgdgdgd.elf"  ./cbcb.o   
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o:(.init9+0x0): undefined reference to `main'
+make: *** [dgdgdgd.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:48:22 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Building file: ../Door_Security_System2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System2.d" -MT"Door_Security_System2.o" -c -o "Door_Security_System2.o" "../Door_Security_System2.c"
+In file included from ../Door_Security_System2.c:1:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Door_Security_System2.c: In function 'main':
+../Door_Security_System2.c:36: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+../Door_Security_System2.c:72: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+../Door_Security_System2.c: In function 'BUZZER_ON_MIN':
+../Door_Security_System2.c:108: warning: implicit declaration of function 'Home'
+Finished building: ../Door_Security_System2.c
+ 
+Building target: Control_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU.map -mmcu=atmega16 -o "Control_ECU.elf"  ./Door_Security_System2.o ./buzzer.o ./external_eeprom.o ./gpio.o ./motor.o ./pwm.o ./timer0.o ./twi.o ./uart.o   
+./Door_Security_System2.o: In function `main':
+../Door_Security_System2.c:15: undefined reference to `Home'
+make: *** [Control_ECU.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:48:22 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13460 bytes (82.2% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+01:48:23 **** Incremental Build of configuration Debug for project dgdgdgd ****
+make all 
+Building target: dgdgdgd.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,dgdgdgd.map -mmcu=atmega16 -o "dgdgdgd.elf"  ./cbcb.o   
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o:(.init9+0x0): undefined reference to `main'
+make: *** [dgdgdgd.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:50:19 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Building file: ../Door_Security_System2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System2.d" -MT"Door_Security_System2.o" -c -o "Door_Security_System2.o" "../Door_Security_System2.c"
+In file included from ../Door_Security_System2.c:1:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Door_Security_System2.c: In function 'main':
+../Door_Security_System2.c:36: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+../Door_Security_System2.c:72: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+../Door_Security_System2.c: In function 'BUZZER_ON_MIN':
+../Door_Security_System2.c:108: warning: implicit declaration of function 'Home'
+Finished building: ../Door_Security_System2.c
+ 
+Building target: Control_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU.map -mmcu=atmega16 -o "Control_ECU.elf"  ./Door_Security_System2.o ./buzzer.o ./external_eeprom.o ./gpio.o ./motor.o ./pwm.o ./timer0.o ./twi.o ./uart.o   
+./Door_Security_System2.o: In function `main':
+../Door_Security_System2.c:15: undefined reference to `Home'
+make: *** [Control_ECU.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:50:20 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13460 bytes (82.2% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:28:36 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Building file: ../Door_Security_System2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System2.d" -MT"Door_Security_System2.o" -c -o "Door_Security_System2.o" "../Door_Security_System2.c"
+In file included from ../Door_Security_System2.c:1:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Door_Security_System2.c: In function 'main':
+../Door_Security_System2.c:36: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+../Door_Security_System2.c:72: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+../Door_Security_System2.c: In function 'BUZZER_ON_MIN':
+../Door_Security_System2.c:108: warning: implicit declaration of function 'Home'
+Finished building: ../Door_Security_System2.c
+ 
+Building file: ../buzzer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"buzzer.d" -MT"buzzer.o" -c -o "buzzer.o" "../buzzer.c"
+In file included from ../gpio.h:16,
+                 from ../buzzer.h:2,
+                 from ../buzzer.c:1:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+Finished building: ../buzzer.c
+ 
+Building file: ../external_eeprom.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"external_eeprom.d" -MT"external_eeprom.o" -c -o "external_eeprom.o" "../external_eeprom.c"
+In file included from ../external_eeprom.h:17,
+                 from ../external_eeprom.c:12:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+Finished building: ../external_eeprom.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+In file included from ../gpio.h:16,
+                 from ../gpio.c:13:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+Finished building: ../gpio.c
+ 
+Building file: ../motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"motor.d" -MT"motor.o" -c -o "motor.o" "../motor.c"
+In file included from ../gpio.h:16,
+                 from ../motor.h:16,
+                 from ../motor.c:15:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+Finished building: ../motor.c
+ 
+Building file: ../pwm.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"pwm.d" -MT"pwm.o" -c -o "pwm.o" "../pwm.c"
+In file included from ../gpio.h:16,
+                 from ../pwm.h:14,
+                 from ../pwm.c:15:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+Finished building: ../pwm.c
+ 
+Building file: ../timer0.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"timer0.d" -MT"timer0.o" -c -o "timer0.o" "../timer0.c"
+In file included from ../timer0.h:2,
+                 from ../timer0.c:1:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../timer0.c: In function 'Timer0_SetcallBack':
+../timer0.c:48: warning: function return types not compatible due to 'volatile'
+Finished building: ../timer0.c
+ 
+Building file: ../twi.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"twi.d" -MT"twi.o" -c -o "twi.o" "../twi.c"
+In file included from ../twi.h:16,
+                 from ../twi.c:13:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+Finished building: ../twi.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+In file included from ../uart.h:16,
+                 from ../uart.c:13:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+Finished building: ../uart.c
+ 
+Building target: Control_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU.map -mmcu=atmega16 -o "Control_ECU.elf"  ./Door_Security_System2.o ./buzzer.o ./external_eeprom.o ./gpio.o ./motor.o ./pwm.o ./timer0.o ./twi.o ./uart.o   
+./Door_Security_System2.o: In function `main':
+../Door_Security_System2.c:15: undefined reference to `Home'
+make: *** [Control_ECU.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:28:39 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13460 bytes (82.2% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:29:45 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Building file: ../Door_Security_System2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System2.d" -MT"Door_Security_System2.o" -c -o "Door_Security_System2.o" "../Door_Security_System2.c"
+In file included from ../Door_Security_System2.c:1:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Door_Security_System2.c: In function 'main':
+../Door_Security_System2.c:36: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+../Door_Security_System2.c:72: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+Finished building: ../Door_Security_System2.c
+ 
+Building target: Control_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU.map -mmcu=atmega16 -o "Control_ECU.elf"  ./Door_Security_System2.o ./buzzer.o ./external_eeprom.o ./gpio.o ./motor.o ./pwm.o ./timer0.o ./twi.o ./uart.o   
+Finished building target: Control_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_ECU.elf  >"Control_ECU.lss"
+Finished building: Control_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:29:46 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13460 bytes (82.2% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:31:28 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:31:28 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13460 bytes (82.2% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:32:32 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:32:33 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   14176 bytes (86.5% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:39:26 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:39:27 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13862 bytes (84.6% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:40:17 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:40:17 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13860 bytes (84.6% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:41:15 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:41:15 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13502 bytes (82.4% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:41:54 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:41:54 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13502 bytes (82.4% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:45:24 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:45:24 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13502 bytes (82.4% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:46:01 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:46:01 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13502 bytes (82.4% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:46:25 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:46:25 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13502 bytes (82.4% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:47:59 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:47:59 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13502 bytes (82.4% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:48:23 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:48:23 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13502 bytes (82.4% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:52:29 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:52:29 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13502 bytes (82.4% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:55:49 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:55:50 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13860 bytes (84.6% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:58:10 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:58:10 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13860 bytes (84.6% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:00:29 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:00:29 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   14258 bytes (87.0% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:02:15 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:02:15 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   14258 bytes (87.0% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:04:44 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:04:44 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   14258 bytes (87.0% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:04:53 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:04:54 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   14258 bytes (87.0% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:07:03 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9972 bytes (60.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:07:04 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   14258 bytes (87.0% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:13:43 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Building file: ../Door_Security_System2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System2.d" -MT"Door_Security_System2.o" -c -o "Door_Security_System2.o" "../Door_Security_System2.c"
+In file included from ../Door_Security_System2.c:1:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Door_Security_System2.c: In function 'main':
+../Door_Security_System2.c:38: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+../Door_Security_System2.c:74: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+Finished building: ../Door_Security_System2.c
+ 
+Building target: Control_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU.map -mmcu=atmega16 -o "Control_ECU.elf"  ./Door_Security_System2.o ./buzzer.o ./external_eeprom.o ./gpio.o ./motor.o ./pwm.o ./timer0.o ./twi.o ./uart.o   
+Finished building target: Control_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_ECU.elf  >"Control_ECU.lss"
+Finished building: Control_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9654 bytes (58.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:13:44 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13190 bytes (80.5% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:14:20 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9654 bytes (58.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:14:20 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   12962 bytes (79.1% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:15:38 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9654 bytes (58.9% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:15:39 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13190 bytes (80.5% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:22:13 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Building file: ../Door_Security_System2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System2.d" -MT"Door_Security_System2.o" -c -o "Door_Security_System2.o" "../Door_Security_System2.c"
+In file included from ../Door_Security_System2.c:1:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Door_Security_System2.c: In function 'main':
+../Door_Security_System2.c:38: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+../Door_Security_System2.c:75: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+../Door_Security_System2.c:115: error: expected declaration or statement at end of input
+make: *** [Door_Security_System2.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:22:14 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13190 bytes (80.5% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:23:08 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Building file: ../Door_Security_System2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System2.d" -MT"Door_Security_System2.o" -c -o "Door_Security_System2.o" "../Door_Security_System2.c"
+In file included from ../Door_Security_System2.c:1:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Door_Security_System2.c: In function 'main':
+../Door_Security_System2.c:38: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+../Door_Security_System2.c:75: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+Finished building: ../Door_Security_System2.c
+ 
+Building target: Control_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU.map -mmcu=atmega16 -o "Control_ECU.elf"  ./Door_Security_System2.o ./buzzer.o ./external_eeprom.o ./gpio.o ./motor.o ./pwm.o ./timer0.o ./twi.o ./uart.o   
+Finished building target: Control_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_ECU.elf  >"Control_ECU.lss"
+Finished building: Control_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9672 bytes (59.0% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:23:09 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13190 bytes (80.5% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:27:20 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Building file: ../Door_Security_System2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System2.d" -MT"Door_Security_System2.o" -c -o "Door_Security_System2.o" "../Door_Security_System2.c"
+In file included from ../Door_Security_System2.c:1:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Door_Security_System2.c: In function 'main':
+../Door_Security_System2.c:38: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+../Door_Security_System2.c:75: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+Finished building: ../Door_Security_System2.c
+ 
+Building target: Control_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU.map -mmcu=atmega16 -o "Control_ECU.elf"  ./Door_Security_System2.o ./buzzer.o ./external_eeprom.o ./gpio.o ./motor.o ./pwm.o ./timer0.o ./twi.o ./uart.o   
+Finished building target: Control_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_ECU.elf  >"Control_ECU.lss"
+Finished building: Control_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9672 bytes (59.0% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:27:21 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13190 bytes (80.5% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:28:54 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Building file: ../Door_Security_System2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System2.d" -MT"Door_Security_System2.o" -c -o "Door_Security_System2.o" "../Door_Security_System2.c"
+In file included from ../Door_Security_System2.c:1:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Door_Security_System2.c: In function 'main':
+../Door_Security_System2.c:38: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+../Door_Security_System2.c:75: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+Finished building: ../Door_Security_System2.c
+ 
+Building target: Control_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU.map -mmcu=atmega16 -o "Control_ECU.elf"  ./Door_Security_System2.o ./buzzer.o ./external_eeprom.o ./gpio.o ./motor.o ./pwm.o ./timer0.o ./twi.o ./uart.o   
+Finished building target: Control_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_ECU.elf  >"Control_ECU.lss"
+Finished building: Control_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9672 bytes (59.0% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:28:55 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13190 bytes (80.5% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:33:14 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9672 bytes (59.0% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:33:14 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13404 bytes (81.8% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:36:55 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Building file: ../Door_Security_System2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System2.d" -MT"Door_Security_System2.o" -c -o "Door_Security_System2.o" "../Door_Security_System2.c"
+In file included from ../Door_Security_System2.c:1:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Door_Security_System2.c: In function 'main':
+../Door_Security_System2.c:38: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+../Door_Security_System2.c:75: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+Finished building: ../Door_Security_System2.c
+ 
+Building target: Control_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU.map -mmcu=atmega16 -o "Control_ECU.elf"  ./Door_Security_System2.o ./buzzer.o ./external_eeprom.o ./gpio.o ./motor.o ./pwm.o ./timer0.o ./twi.o ./uart.o   
+Finished building target: Control_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_ECU.elf  >"Control_ECU.lss"
+Finished building: Control_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   10032 bytes (61.2% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:36:56 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   14106 bytes (86.1% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:40:53 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   10032 bytes (61.2% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:40:53 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   14108 bytes (86.1% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:56:34 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Building file: ../Door_Security_System2.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System2.d" -MT"Door_Security_System2.o" -c -o "Door_Security_System2.o" "../Door_Security_System2.c"
+In file included from ../Door_Security_System2.c:1:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System2.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Door_Security_System2.c: In function 'main':
+../Door_Security_System2.c:37: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+../Door_Security_System2.c:74: warning: passing argument 2 of 'EEPROM_readByte' makes pointer from integer without a cast
+Finished building: ../Door_Security_System2.c
+ 
+Building target: Control_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU.map -mmcu=atmega16 -o "Control_ECU.elf"  ./Door_Security_System2.o ./buzzer.o ./external_eeprom.o ./gpio.o ./motor.o ./pwm.o ./timer0.o ./twi.o ./uart.o   
+Finished building target: Control_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_ECU.elf  >"Control_ECU.lss"
+Finished building: Control_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   10032 bytes (61.2% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:56:35 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13650 bytes (83.3% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:00:12 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   10032 bytes (61.2% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:00:12 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13650 bytes (83.3% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:00:55 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   10032 bytes (61.2% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:00:55 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13650 bytes (83.3% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:01:07 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   10032 bytes (61.2% Full)
+(.text + .data + .bootloader)
+
+Data:         65 bytes (6.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+13:01:07 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13650 bytes (83.3% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

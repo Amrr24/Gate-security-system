@@ -1,0 +1,74 @@
+#include "std_types.h"
+#include "uart.h"
+#include "motor.h"
+#include "timer0.h"
+#include "external_eeprom.h"
+#include <string.h>
+#include <avr/delay.h>
+ void Timer0_Delay(void);
+uint8  Str1[5] , Str2[5]  , Saved_Pass[5];
+uint8 Str[20] ;
+uint8 warn ;
+int tick ;
+int main (void){
+	int i  ,n = 0  ;
+	DcMotor_Init();
+	Timer0_config config = {CLOCK_1024,CTC,0,250};
+
+	Uart_config uart_config = {8,1};
+	UART_init(9600, &uart_config);
+
+	while(1){
+
+		n = UART_recieveByte();
+		if (n ==100){
+			for (i=0; i<5; i++){
+				_delay_ms(10);
+				Saved_Pass[i]= UART_recieveByte();
+				EEPROM_writeByte(0x0311 + i,Saved_Pass[i]);
+			}
+		} else if (n==111){
+			for (i=0; i<5 ; i++){
+				_delay_ms(10);
+				Str2[i]= UART_recieveByte();
+			}
+			for (i=0; i<5 ; i++){
+			EEPROM_readByte(0x0311 + i,Str1[i]);
+			_delay_ms(10);
+			}
+			for (i=0 ; i<5; i++){
+					if (Str2[i] != Str1[i] ){
+						n =1 ;
+						break ;
+					}else {
+						n =  0 ;
+					}
+				}
+			if ( n == 0 ){
+				UART_sendByte(DOOR_OPEN);
+				Dc_Motor_Rotate(Rot_CW , 100);
+				Timer0_init(&config);
+				 Timer0_SetcallBack(&Timer0_Delay);
+
+			}else if (n == 1 ){
+				GPIO_setupPinDirection(PORTB_ID, PIN7_ID, PIN_OUTPUT);
+							GPIO_writePin(PORTB_ID, PIN7_ID, LOGIC_HIGH);
+			}
+		}else if (n==222){
+
+		}
+	}
+	return 0 ;
+}
+ void Timer0_Delay(void){
+	 int tick = 0 ;
+	 if (tick == 469){
+		 Dc_Motor_Rotate(Rot_CW , 0);
+	 }else if (tick ==562){
+		 Dc_Motor_Rotate(Rot_A_CW , 100);
+	 }else if (tick == 1031){
+		 Dc_Motor_Rotate(Stop, 0);
+		 Time0_deinit();
+	 }
+	 tick ++ ;
+ }

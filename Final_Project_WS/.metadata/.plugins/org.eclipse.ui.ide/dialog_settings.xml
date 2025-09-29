@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\amrme\Downloads\Final_Project_test_shafie\Final_Project_test_shafie\Final_Project_test\Final_Project_WS\Hmi_ECU_sh"/>
+			<item value="C:\Users\amrme\Downloads\10.USART\UART_Eclipse_WS\Exercise2_MC1"/>
+			<item value="C:\Users\amrme\Downloads\10.USART\UART_Eclipse_WS\Exercise2_MC2"/>
+			<item value="C:\Users\amrme\Downloads\10.USART\UART_Eclipse_WS\Exercise3_MC2"/>
+			<item value="C:\Users\amrme\Mini_Project3 - Copy\Mini_Project3_WorkSpace\Mini_Project3"/>
+			<item value="C:\Users\amrme\Downloads\9.ICU\9.ICU\ICU_Eclipse_WS"/>
+			<item value="C:\Users\amrme\Downloads\12.I2C\12.I2C\I2C_Eclipse_WS\EEPROM_I2C_Exercise"/>
+			<item value="C:\Users\amrme\Downloads\10.USART\UART_Eclipse_WS\Exercise3_MC1"/>
+			<item value="C:\Users\amrme\Mini_Project3 - Copy\Mini_Project3_WorkSpace"/>
+			<item value="C:\Users\amrme\Downloads\7.Keypad and LCD\7.Keypad and LCD\Keypad_LCD_Eclipse_WS\Exercise1"/>
+			<item value="C:\Users\amrme\Downloads\7.Keypad and LCD\7.Keypad and LCD\Keypad_LCD_Eclipse_WS\Challenge"/>
+			<item value="C:\Users\amrme\Downloads\7.Keypad and LCD\7.Keypad and LCD\Keypad_LCD_Eclipse_WS\Exercise3"/>
+			<item value="C:\Users\amrme\Mini_Project4\Mini_Project4_WorkSpace\Mini_Project4"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,100 @@
+/**************************************************************************
+ * Module : TIMER
+
+ * Author's Name : Amr Medhat  Mohamed      embedded diploma 60
+
+ * File Name : timer.c
+
+ * Description : Source file of Timer 0 Driver
+ **************************************************************************/
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+                          INCLUDES
+ -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+/*Including Libraries and H files Needed for the driver  */
+#include "timer0.h"
+#include "std_types.h"
+#include <avr/io.h>
+#include <avr/interrupt.h>
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+                              GLOBAL VARIABLES
+ -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+uint8 WGM  ; //Global Variable That will be used to set sum bits in TCCR0 register with different values according to the selection data
+/*
+ * Declaring a pointer to a function that points to Null Initially , This for call back function
+ */
+static volatile void (*g_callBackPtr)(void) = NULL_PTR;
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_--_-_-_-__-_
+
+                             FUNCTIONS DEFINATION
+ -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_--_-_-_-__-_-_*/
+/*
+ * This ISR function is used in case of overflow mode
+ */
+ISR(TIMER0_OVF_vect){
+	if(g_callBackPtr != NULL_PTR)
+		{
+			/* Call the Call Back function in the application after the edge is detected */
+			(*g_callBackPtr)(); /* another method to call the function using pointer to function g_callBackPtr(); */
+		}
+}
+/*
+ * This ISR function is used in case of CTC  mode , That is been called each time it reaches the compare value
+ */
+ISR(TIMER0_COMP_vect){
+	if(g_callBackPtr != NULL_PTR)
+		{
+			/* Call the Call Back function in the application after the edge is detected */
+			(*g_callBackPtr)(); /* another method to call the function using pointer to function g_callBackPtr(); */
+		}
+}
+/*
+ * Timer0_init is a function that used to set some Bits in Timer0 Registers For
+ *  Starting the timer to count till the desired value
+ */
+void Timer0_init(const Timer0_config *ptr){
+	TCNT0 = ptr->init_value ; // Set The initial value in TCNT0
+	TCCR0 = ptr->clock ;    // Set the prescaler selected
+	OCR0 = ptr->comp_value ; // Set the compare value in OCR0 register that will be automatically used in case of selection of CTC mode
+	/*
+	 * This switch case used to differentiate between wish mode of 4 will be used
+	 */
+	switch (ptr->mode){
+	case 0 : // Case 0 : Normal Mode
+		WGM = 0x00 ; //  set bits -> WGM00 = 0 , WGM01 = 0
+		TIMSK = 1; // Enable TOIE0 BIT =1 , That enable The overflow mode interrupt
+		break ;
+	case 1 :// Case 1 : PWM Mode which is Not going to be used in this project
+		WGM = 0x40 ; // set bits -> WGM00 = 1 , WGM01 = 0
+
+		break ;
+	case 2 :// Case 2 : CTC Mode
+		WGM = 0x08  ; // set bits -> WGM00 = 0 , WGM01 = 1
+		TIMSK = 2; // Enable OCIE0  BIT = 1 , That enable The CTC mode interrupt
+
+		break ;
+	case 3 :// Case 3 : Fast_PWM Mode
+		WGM = 0x48 ; //set bits -> WGM00 = 1 , WGM01 = 1
+		break ;
+	default :
+		break ;
+	}
+	TCCR0 |= WGM ; // Use this Variable WGM to set the requirements in TCCR0 According to the switch case
+}
+/*
+ * This Function "Timer0_SetcallBack" Used to set the name of the function
+ *  needed to behave every interrupt during running the Application
+ */
+void Timer0_SetcallBack(void(*a_ptr)(void)){
+	g_callBackPtr = a_ptr;
+}
+/*
+ * This Function "Time0_deinit" Used to disable Timer0 and reset it , To be used again
+ */
+void Time0_deinit(void){
+TCCR0 = 0 ;
+TCNT0 = 0 ;
+TIMSK = 0 ;
+
+}

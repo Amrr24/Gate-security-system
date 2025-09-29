@@ -1,0 +1,9 @@
+
+#include "gpio.h"
+#ifndef BUZZER_H_
+#define BUZZER_H_
+#define PORT_BUZZER_ID PORTB_ID
+#define PIN_BUZZER_ID PIN6_ID
+
+
+#endif /* BUZZER_H_ */

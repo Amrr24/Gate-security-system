@@ -1,0 +1,11 @@
+
+#include "gpio.h"
+#ifndef BUZZER_H_
+#define BUZZER_H_
+#define PORT_BUZZER_ID PORTD_ID
+#define PIN_BUZZER_ID PIN4_ID
+void Buzzer_inint(void);
+void Buzzer_On(void);
+void Buzzer_Off(void);
+
+#endif /* BUZZER_H_ */

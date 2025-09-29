@@ -1,0 +1,66 @@
+/**************************************************************************
+ * Module : Motor
+
+ * Author's Name : Amr Medhat  Mohamed      embedded diploma 60
+
+ * File Name : motor.c
+
+ * Description : Source file of Motor driver
+ **************************************************************************/
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+                          INCLUDES
+ -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+/*Including header files needed for this driver */
+#include "motor.h" // for using the function prototypes from the header file
+#include "gpio.h" // for calling functions that set the pin direction and it's value
+#include "pwm.h"  // For generating the duty cycle signal to the motor
+#include "std_types.h"
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+                              GLOBAL VARIABLES
+ -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+
+uint8 duty_cycle ; // defining variable of 1 byte size to store the duty cycle will be calculated to the pwm driver to generate
+
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_--_-_-_-__-_
+
+                             FUNCTIONS DEFINATION
+ -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_--_-_-_-__-_-_*/
+void DcMotor_Init(void){
+	/*PINS 4,5 in PORTB ARE CONTROL PINS OF THE MOTOR
+	 *  Setting : pins 4,5 in port B as output pins
+	 * start the motor in stop condition by applying zero signals to the
+	   motor h bridge by making pins 4,5 in port B as output of logic low
+	   which is zero .
+
+	 */
+	GPIO_setupPinDirection(MOTOR_CONTROL_PORT_ID, MOTOR_CONTROL_PIN1_ID, PIN_OUTPUT);
+	GPIO_setupPinDirection(MOTOR_CONTROL_PORT_ID, MOTOR_CONTROL_PIN2_ID, PIN_OUTPUT);
+	GPIO_writePin(MOTOR_CONTROL_PORT_ID, MOTOR_CONTROL_PIN1_ID, LOGIC_LOW);
+	GPIO_writePin(MOTOR_CONTROL_PORT_ID, MOTOR_CONTROL_PIN2_ID, LOGIC_LOW);
+}
+
+void Dc_Motor_Rotate(DcMotor_State state ){
+
+	 // calling function of pwn that take that duty cycle and generate the special signals for the motor pins
+	switch (state){
+	case 0 :
+		GPIO_writePin(MOTOR_CONTROL_PORT_ID, MOTOR_CONTROL_PIN2_ID, LOGIC_HIGH); // Rotate the motor clockwise direction
+		break ;
+	case 1 :
+		GPIO_writePin(MOTOR_CONTROL_PORT_ID,MOTOR_CONTROL_PIN1_ID, LOGIC_HIGH);// Rotate the motor anti-clockwise direction
+		break ;
+	case 2  :
+		GPIO_writePin(MOTOR_CONTROL_PORT_ID,MOTOR_CONTROL_PIN1_ID, LOGIC_LOW); // Stop the motor's motion
+		GPIO_writePin(MOTOR_CONTROL_PORT_ID, MOTOR_CONTROL_PIN2_ID, LOGIC_LOW);
+		break ;
+	default :
+		GPIO_writePin(MOTOR_CONTROL_PORT_ID, MOTOR_CONTROL_PIN1_ID, LOGIC_LOW); // Stop the motor's motion as default
+		GPIO_writePin(MOTOR_CONTROL_PORT_ID, MOTOR_CONTROL_PIN2_ID, LOGIC_LOW);
+		break ;
+	}
+
+
+
+}

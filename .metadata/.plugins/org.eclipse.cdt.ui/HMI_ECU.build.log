@@ -1,0 +1,45 @@
+13:01:07 **** Incremental Build of configuration Debug for project Hmi_ECU ****
+make all 
+Building file: ../Door_Security_System.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Door_Security_System.d" -MT"Door_Security_System.o" -c -o "Door_Security_System.o" "../Door_Security_System.c"
+In file included from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../Door_Security_System.c:1:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+In file included from ../timer0.h:2,
+                 from ../Door_Security_System.c:2:
+../std_types.h:42:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+../Door_Security_System.c: In function 'main':
+../Door_Security_System.c:24: warning: implicit declaration of function 'KEYPAD_getPressedKey'
+Finished building: ../Door_Security_System.c
+ 
+Building target: Hmi_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Hmi_ECU.map -mmcu=atmega16 -o "Hmi_ECU.elf"  ./Door_Security_System.o ./gpio.o ./keypad.o ./lcd.o ./timer0.o ./uart.o   
+Finished building target: Hmi_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Hmi_ECU.elf  >"Hmi_ECU.lss"
+Finished building: Hmi_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Hmi_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   13650 bytes (83.3% Full)
+(.text + .data + .bootloader)
+
+Data:        176 bytes (17.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+13:01:08 Build Finished. 0 errors, 4 warnings. (took 763ms)
+

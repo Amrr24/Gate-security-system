@@ -1,0 +1,275 @@
+/**************************************************************************
+ * Module : Door Security System
+
+ * Author's Name : Amr Medhat  Mohamed      embedded diploma 60
+
+ * File Name : Door_Security_System.c
+
+ * Description : Source file of executing the Main file needed for MC 1 "HMI_ECU"
+ **************************************************************************/
+/********************************************************************************
+
+                          INCLUDES
+ *********************************************************************************/
+#include <avr/delay.h>
+#include "timer0.h"
+#include "std_types.h"
+#include "lcd.h"
+#include "uart.h"
+#include "gpio.h"
+#include <avr/interrupt.h>
+/**********************************************************************************
+
+                              GLOBAL VARIABLES
+ ***********************************************************************************/
+uint8 Str1[5] , Str2[5],Str3[5],Str4[5] ; // Arrays Used in code to store date and compare , During Matching the password
+uint8 n  ; // Variable That used as flag sets to 1 when mismatch happens and 0 if match
+int tick1 = 0 ; //Variable that used in call back door delay function that ticks an increment by 1 every interrupt
+int tick2 = 0 ;//Variable that used in call back Buzzer operate  function that ticks an increment by 1 every interrupt
+/*******************************************************************************
+ *                      Functions Prototypes                                   *
+ *******************************************************************************/
+void Setting_Up_Password(void);
+void Home(void);
+void Open_Door(void);
+void Change_Password(void);
+void Timer0_Door_Delay(void);
+void BUZZER_ON_MIN(void);
+/* *******************************************************************************
+
+                             FUNCTIONS DEFINATION
+ ********************************************************************************/
+int main (void){
+	SREG |= (1<<7); // Enable I-Bit
+	uint8 Char ; // Local Variable that Always gets inside it the value of pressed key
+	LCD_init(); // Initialize Lcd Driver
+	Uart_config uart_config = {8,1}; // Set DATA bits = 8-bit , Stop_bit = 1 stop bit
+	UART_init(9600, &uart_config); // Set baud rate by 9600
+	Setting_Up_Password(); // Call Function needed first to insert your new password
+	Home(); // Call home function that display options available
+	while (1)
+	{
+		Char = KEYPAD_getPressedKey(); // Get pressed key whether '+' or '-'
+		switch (Char) {
+		case '+' : // In case of User selected to Open door
+			Open_Door(); //  Call open door function
+			break ;
+		case '-' :// In case of User selected to Change Password
+			Change_Password(); //  Call Change Password Function
+			break ;
+		default :
+			break ;
+		}
+
+
+	}
+	return 0 ;
+}
+/*
+ * This Function "Step1_Change_Pass_Send" Used to Set up initially Your desired Password
+  and it will ask you to insert it 2 times and has to be confirmed , i.e Has to match
+ if it matches it will be stored in EEPROM Memory for further needs and if not it will ask you for
+ setting it up again till it matches
+ */
+void Setting_Up_Password(void){
+	 // uint8 Str1[5] , Str2[5] ;
+	int i=0 ,j=0 ,z=0; // Variables needed for looping in for loops
+	uint8 m =0  ; // Variable of one byte used to store the key pressed number
+	LCD_clearScreen(); // Clear Screen
+	LCD_displayStringRowColumn(0,0,"Plz Enter Pass"); // Display
+	/*
+	 * First For loop Used to get the password from user for the first time
+	  and store it temporary in array till the user press enter
+	 */
+	for (i=0 ; i<7; i++ ){
+		_delay_ms(1500);
+		m= KEYPAD_getPressedKey() ;
+		if (m == 13 ){
+			break ;
+		}
+		Str1[i] = m;
+		_delay_ms(3000); //  Needed delay for keypad pressing time
+		LCD_displayStringRowColumn(1,i,"*"); // Display
+	}
+	_delay_ms(3000);
+	LCD_clearScreen();// Clear Screen
+	LCD_displayStringRowColumn(0,0,"Plz ReEnter Pass");// Display
+	/*
+		 *Second For loop Used to get the password from user for the second time
+		  and store it temporary in array till the user press enter
+		 */
+	for (j=0 ; j<7 ; j++ ){
+		m = KEYPAD_getPressedKey();
+		if ( m == 13){
+			break ;
+		}
+		Str2[j] = m;
+		_delay_ms(3000);//  Needed delay for keypad pressing time
+		LCD_displayStringRowColumn(1,j,"*");// Display
+	}
+	LCD_clearScreen();// Clear Screen
+	/*
+	 * For loop Used to compare two arrays "i.e Two passwords if match flag n =0 , if not rise flag n=1 "
+	 */
+	for (i=0 ; i<5; i++){
+		if (Str1[i] != Str2[i] ){
+			n =1 ;
+			break ;
+		}else {
+			n =  0 ;
+		}
+	}
+	/*
+	 * If match send this password to MC2 by UART protocol
+	 */
+	if (n==0){
+		UART_sendByte(100); // Dumb #defined byte to till the other cpu to read the password and store it in EEPROM Memory
+		_delay_ms(100); // Needed Delay for Uart
+		for(z=0 ; z<5 ; z++){
+			UART_sendByte(Str1[z]); // Send byte by byte
+			_delay_ms(10);
+		}
+		/*
+		 * If mismatch Re ask the user for setting up again
+		 */
+	}else if (n ==1 ) {
+		Setting_Up_Password();  // Call set up password Function
+	}
+}
+/*
+ * Home Function used to display the options for the user
+ */
+void Home(void){
+	LCD_clearScreen(); // Clear Screen
+	LCD_displayStringRowColumn(0,0,"+ : Open Door"); // Display
+	LCD_displayStringRowColumn(1,0,"- : Change Pass"); // Display
+}
+/*
+ * Open_Door Function used to ask the user for his password and send it to MC2 to compare with the one stored in EEPROM
+ iF MATCHES MC2 send configurable byte to MC1 to lcd display door open status
+ If NOT MATCHES   MC2 send configurable byte to MC1 to ask the user for inserting again for maximum 3 times
+ other wise An Error will be displayed
+ */
+void Open_Door(void){
+	int i  , action  ; // Variables i for looping , action for storing #defined action according the MC2 decision
+	uint8 m ; // variable stores the key pressed number
+	LCD_clearScreen(); // Clear Screen
+	LCD_displayStringRowColumn(0,0,"Please Enter Pass"); //  Display
+	_delay_ms(2000);
+	/*
+	 * Getting the password from user
+	 */
+	for (i =0 ; i<7 ; i++){
+		m = KEYPAD_getPressedKey();
+		if (m == 13){
+			break ;
+		}
+		Str3[i] = m;
+		_delay_ms(3000);
+		LCD_displayStringRowColumn(1,i,"*");
+	}
+	UART_sendByte(111); // Send a configurable byte that tills MC2 to compare this password to the one stored there about (opening door senario)
+	_delay_ms(100);
+	for(i = 0 ; i < 5 ; i ++){
+		UART_sendByte(Str3[i]); // Send byte by byte
+		_delay_ms(10);
+	}
+	action = UART_recieveByte(); // Taking The MC2 decision
+	if (action == DOOR_OPEN){ /* if MC2 finds a match , Here it will display Door opening for 15 sec ,then
+	 display door opened for 3 sec then door closing for 15 sec with the aid of Timer 0 Driver
+	 that counts all of this cycles */
+		LCD_clearScreen(); // clear screen
+		LCD_displayStringRowColumn(0,0,"Door Opening"); // display
+		/*
+		 * This config of type Timer0_config  used to prescale the clock by dividing it by 1024 and selection of compare
+		mode , Initializing the TCNT0 To count from zero , and compare value of 250
+		 */
+		Timer0_config config = {CLOCK_1024,CTC,0,250};
+		Timer0_init(&config); // Initializing
+		Timer0_SetcallBack(&Timer0_Door_Delay); // Set call back function to the door senario
+	}else if (action == (AGAIN + 2)){ // if MC2 finds a mismatch for 3 times it will display error of wrong password
+		UART_sendByte(BUZZER_ON);
+		LCD_clearScreen(); // clear screen
+		LCD_displayStringRowColumn(0, 0, "ERROR "); // display
+		LCD_displayStringRowColumn(1, 0, "WRONG PASSWORD");// display
+		Timer0_config config = {CLOCK_1024,CTC,0,250};
+		Timer0_init(&config);// Initializing
+		Timer0_SetcallBack(&BUZZER_ON_MIN);// Set call back function to the buzzer state senario
+	}else { // if MC2 finds a mismatch times less than 3 it will call the function again
+		Open_Door(); //  Call open door function
+	}
+}
+/*
+ * Change_Password Function used to ask the user for his password and send it to MC2 to compare with the one stored in EEPROM
+ iF MATCHES MC2 send configurable byte to MC1 to call setting up password
+ If NOT MATCHES   MC2 send configurable byte to MC1 to ask the user for inserting again for maximum 3 times
+ other wise An Error will be displayed
+ */
+void Change_Password(void){
+	int i , action_2  ; // action2 variable for storing the configured byte decision from MC2
+	uint8 m ;// Variable of one byte used to store the key pressed number
+	LCD_clearScreen(); // clear screen
+	LCD_displayStringRowColumn(0,0,"Please Enter Pass"); // display
+	_delay_ms(2000);
+	/*
+	 * Get the password inserted by user
+	 */
+	for (i=0 ; i<7 ; i++){
+		m = KEYPAD_getPressedKey();
+		if (m == 13){
+			break ;
+		}
+		Str4[i] = m;
+		_delay_ms(3000);
+		LCD_displayStringRowColumn(1,i,"*");
+	}
+	UART_sendByte(222); // send configured byte to MC2 that tells it to compare it with the one there about Change Password senario
+	_delay_ms(100);
+	/*
+	 * Send inserted password to MC2
+	 */
+	for (i = 0 ; i <5 ; i ++){
+		UART_sendByte(Str4[i]); // send byte by byte
+		_delay_ms(10);
+	}
+	action_2 = UART_recieveByte(); // receiving configured byte from MC2 whether matches or not
+	if (action_2 == OK){ // if matches Ask the user to re set up his password again
+		Setting_Up_Password() ; // call set up function
+
+	}else if (action_2 == (NOT_OK + 2 )){ // If not for 3 times it will display error wrong password
+		UART_sendByte(BUZZER_ON); // Send to MC2 to start a buzzer on
+		LCD_clearScreen(); // clear screen
+		LCD_displayStringRowColumn(0, 0, "ERROR"); // display
+		LCD_displayStringRowColumn(0, 0, "WRONG PASSWORD");// display
+		Timer0_config config = {CLOCK_1024,CTC,0,250};
+		Timer0_init(&config); // initializing
+		Timer0_SetcallBack(&BUZZER_ON_MIN); // Set call back function to the buzzer state senario
+
+	}else {
+		Change_Password(); // Call Change password function
+
+	}
+}
+void Timer0_Door_Delay(void){
+
+	if (tick1 == 469){
+		LCD_clearScreen();
+		LCD_displayStringRowColumn(0, 0,"Door Opened");
+	}else if (tick1 == 562){
+		LCD_clearScreen();
+		LCD_displayStringRowColumn(0, 0,"Door Closing");
+	}else if (tick1 == 1031){
+		Time0_deinit();
+		Home();
+		tick1 = 0 ;
+	}
+	tick1 ++ ;
+}
+void BUZZER_ON_MIN(void){
+
+	if (tick2 == 1875){
+		Home();
+		Time0_deinit();
+	}
+	tick2 ++ ;
+}

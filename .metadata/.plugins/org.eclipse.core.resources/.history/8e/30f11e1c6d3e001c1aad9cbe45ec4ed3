@@ -1,0 +1,82 @@
+#include "std_types.h"
+#include "uart.h"
+#include "motor.h"
+#include "timer0.h"
+#include "external_eeprom.h"
+#include <string.h>
+#include <avr/delay.h>
+/*void Wait_3_Sec(void);
+void Wait_15_Sec(void);
+void Wait_1_Min(void);*/
+uint8  Str1[5] , Str2[5]  , Saved_Pass[5];
+uint8 Str[20] ;
+uint8 warn ;
+int tick ;
+int main (void){
+	int i  ,n = 0  ;
+	DcMotor_Init();
+	Uart_config uart_config = {8,1};
+	UART_init(9600, &uart_config);
+
+	while(1){
+
+		n = UART_recieveByte();
+		if (n ==100){
+			for (i=0; i<5; i++){
+				_delay_ms(10);
+				Saved_Pass[i]= UART_recieveByte();
+				EEPROM_writeByte(0x0311 + i,Saved_Pass[i]);
+			}
+		} else if (n==111){
+			for (i=0; i<5 ; i++){
+				_delay_ms(10);
+				Str2[i]= UART_recieveByte();
+			}
+			for (i=0; i<5 ; i++){
+			EEPROM_readByte(0x0311 + i,Str1[i]);
+			_delay_ms(10);
+			}
+			for (i=0 ; i<5; i++){
+					if (Str2[i] != Str1[i] ){
+						n =1 ;
+						break ;
+					}else {
+						n =  0 ;
+					}
+				}
+			if ( n == 0 ){
+				Dc_Motor_Rotate(Rot_CW , 100);
+				/*Timer0_config config = {CLOCK_8,CTC,0,200};
+				Timer0_init(&config);*/
+			}else if (n == 1 ){
+				GPIO_setupPinDirection(PORTB_ID, PIN7_ID, PIN_OUTPUT);
+							GPIO_writePin(PORTB_ID, PIN7_ID, LOGIC_HIGH);
+			}
+		}else if (n==222){
+
+		}
+	}
+	return 0 ;
+}
+ /*void Wait_3_Sec(void){
+	if (){
+
+		tick = 0 ;
+	}
+	tick ++ ;
+}
+void Wait_15_Sec(void){
+	if (){
+
+			tick = 0 ;
+		}
+		tick ++ ;
+}
+void Wait_1_Min(void){
+	if (){
+
+			tick = 0 ;
+		}
+		tick ++ ;
+}
+*/
