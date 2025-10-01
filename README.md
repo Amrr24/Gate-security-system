@@ -1,6 +1,6 @@
-============================================================
+
             GATE SECURITY SYSTEM (AVR Project)
-============================================================
+
 
 📌 Project Overview
 ------------------------------------------------------------
@@ -202,6 +202,6 @@ Time:     0s                                60s
 - **Battery Backup:** Ensure operation during power failures.
 - **Tamper Detection:** Alert if hardware is physically tampered.
 
-============================================================
+
            END OF README - GATE SECURITY SYSTEM
-============================================================
+
